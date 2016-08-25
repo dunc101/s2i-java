@@ -82,11 +82,9 @@ else
   # For binary builds
   echo "Copying binary build as no pom.xml was found"
   cd /tmp/src/deployments
-  mv *.jar app.jar
-  echo "In /tmp/src/deployments"
-  ls -lart > out.txt
-  cat out.txt
-  copy_artifacts "." war ear rar jar
+  mv *.jar ${DEPLOY_DIRE}/app.jar
+
+  #copy_artifacts "." war ear rar jar
 fi
 
 # As Microservices you should only have 1 fat jar
