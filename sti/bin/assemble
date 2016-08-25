@@ -1,6 +1,8 @@
 #!/bin/bash
 . $(dirname $0)/functions
 
+echo "Beginning assembly"
+ls -lart
 HOME=/opt/app-root/src
 
 # we will move any code provided by s2i to here
@@ -76,6 +78,8 @@ if [ -f "$LOCAL_SOURCE_DIR/pom.xml" ]; then
   popd &> /dev/null
 else
   # For binary builds
+  echo "Copying binary build as no pom.xml was found"
+  ls -lart *.jar
   copy_artifacts "." war ear rar jar
 fi
 
