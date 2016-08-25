@@ -82,7 +82,7 @@ else
   # For binary builds
   echo "Copying binary build as no pom.xml was found"
   cd /tmp/src/deployments
-  mv *.jar ${DEPLOY_DIRE}/app.jar
+  mv *.jar ${DEPLOY_DIR}/app.jar
 
   #copy_artifacts "." war ear rar jar
 fi
