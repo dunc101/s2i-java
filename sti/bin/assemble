@@ -3,6 +3,7 @@
 
 echo "Beginning assembly"
 echo "Source is located at ${HOME}/source"
+find / -name openshiftspringbootdemo-0.0.1-SNAPSHOT.jar 2>/dev/null
 ls -lart ${HOME}/source
 HOME=/opt/app-root/src
 
