@@ -3,7 +3,12 @@
 
 echo "Beginning assembly"
 echo "Source is located at ${HOME}/source"
-find / -name openshiftspringbootdemo-0.0.1-SNAPSHOT.jar 2>/dev/null
+ls -lart ${HOME}/source > 1.txt
+cat 1.txt
+ls -lart
+find / -name openshiftspringbootdemo-0.0.1-SNAPSHOT.jar > out.txt
+echo "Did I find jar?"
+cat out.txt
 ls -lart ${HOME}/source
 HOME=/opt/app-root/src
 
@@ -18,6 +23,10 @@ DEPLOY_DIR=/opt/openshift
 # the subdirectory within LOCAL_SOURCE_DIR from where we should copy build
 # artifacts (*.war, *.jar)
 ARTIFACT_DIR=${ARTIFACT_DIR:-target}
+
+echo "What about source here?"
+ls -lart /tmp/src > src.txt
+cat src.txt
 
 # Copy the source for compilation
 # TODO: Remove. Why do we need to move the source???
